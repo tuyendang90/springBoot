@@ -1,0 +1,138 @@
+/* ============================================================================
+   Library definitions for project 'bpr'
+   ============================================================================
+   Define here library dependencies and use them inside your build.gradle
+   files in sub projects.
+
+   Included from: "${rootProject.projectDir}/build.gradle"
+   ============================================================================
+
+ */
+ext {
+
+  groups = [
+          spring    : "org.springframework.boot",
+          mapstruct : "org.mapstruct",
+          fasterxml : "com.fasterxml.jackson.core",
+          validation: "javax.validation",
+          swagger   : "io.springfox",
+          jackson   : "org.codehaus.jackson",
+          swagger   : "io.springfox",
+          boxif     : "com.box",
+          javamail  : "javax.mail"
+  ]
+  versions = [
+          spring      : "2.1.3.RELEASE",
+          lombok      : "1.18.6",
+          mapstructs  : "1.2.0.Final",
+          ehcache     : "2.10.6",
+          commons_lang: "3.0",
+          commons_io  : "2.5",
+          h2          : "1.4.198",
+          fasterxml   : "2.9.8",
+          swagger     : "2.9.2",
+          validation  : "2.0.1.Final",
+          jackson     : "1.1.0",
+          swagger     : "2.9.2",
+          boxif       : "2.32.0",
+          javamail    : "1.4.5"
+  ]
+  libs = [
+
+          /* spring libs*/
+          spring_starter           : "$groups.spring:spring-boot-starter:$versions.spring",
+          spring_cache             : "$groups.spring:spring-boot-starter-cache:$versions.spring",
+          spring_data_jpa          : "$groups.spring:spring-boot-starter-data-jpa:$versions.spring",
+          spring_test              : "$groups.spring:spring-boot-starter-test:$versions.spring",
+          spring_web               : "$groups.spring:spring-boot-starter-web:$versions.spring",
+          spring_security          : "$groups.spring:spring-boot-starter-security:$versions.spring",
+          spring_logs              : "$groups.spring:spring-boot-starter-logging:$versions.spring",
+          spring_log4j2            : "$groups.spring:spring-boot-starter-log4j2:$versions.spring",
+          spring_mail              : "$groups.spring:spring-boot-starter-mail:$versions.spring",
+          spring_websocket         : "$groups.spring:spring-boot-starter-websocket:$versions.spring",
+          spring_actuator          : "$groups.spring:spring-boot-starter-actuator:$versions.spring",
+          spring_thymeleaf         : "$groups.spring:spring-boot-starter-thymeleaf:$versions.spring",
+
+          /* spring cloud*/
+          spring_cloud_sleuth      : "org.springframework.cloud:spring-cloud-starter-sleuth:2.1.1.RELEASE",
+          spring_cloud_zipkin      : "org.springframework.cloud:spring-cloud-starter-zipkin:2.1.1.RELEASE",
+
+          /* cache*/
+          ehcache                  : "net.sf.ehcache:ehcache:$versions.ehcache",
+
+          /* SQL connector*/
+          sql_h2                   : "com.h2database:h2:$versions.h2",
+
+          /* lombok*/
+          lombok                   : "org.projectlombok:lombok:$versions.lombok",
+
+          /*mapstructs*/
+          mapstruct                : "$groups.mapstruct:mapstruct:$versions.mapstructs",
+          mapstruct_processor      : "$groups.mapstruct:mapstruct-processor:$versions.mapstructs",
+
+          /* testing */
+          junit                    : "junit:junit:4.12",
+          mockito_all              : "org.mockito:mockito-all:1.8.5",
+
+          /* logging */
+          slf4j_api                : "org.slf4j:slf4j-api:1.7.10",
+          slf4j_jdk                : "org.slf4j:slf4j-jdk14:1.7.10",
+
+          /* apache commons */
+          commons_lang             : "org.apache.commons:commons-lang3:$versions.commons_lang",
+          commons_io               : "commons-io:commons-io:$versions.commons_io",
+
+          /* fasterxml parse JSON*/
+          fasterxml_annotations    : "$groups.fasterxml:jackson-annotations:$versions.fasterxml",
+          fasterxml_core           : "$groups.fasterxml:jackson-core:$versions.fasterxml",
+          fasterxml_databind       : "$groups.fasterxml:jackson-databind:$versions.fasterxml",
+
+          /* Swagger */
+          swagger_core             : "$groups.swagger:springfox-swagger2:$versions.swagger",
+          swagger_ui               : "$groups.swagger:springfox-swagger-ui:$versions.swagger",
+
+          /* Validation */
+          validation               : "$groups.validation:validation-api:$versions.validation",
+
+          /* Jackson */
+          jackson                  : "$groups.jackson:jackson-core-asl:$versions.jackson",
+
+          /* Json lib */
+          json                     : "net.sf.json-lib:json-lib:2.4:jdk15",
+
+          /* Jaxb */
+          jaxb_api                 : "javax.xml.bind:jaxb-api:2.3.1",
+          jaxb_impl                : "com.sun.xml.bind:jaxb-impl:2.3.1",
+
+          /* Podam */
+          podam                    : "uk.co.jemos.podam:podam:7.2.2.RELEASE",
+
+          /* jsonwebtoken */
+          jjwt                     : "io.jsonwebtoken:jjwt:0.7.0",
+
+          /* javax.inject */
+          javax_inject             : "javax.inject:javax.inject:1",
+
+          /* istack-commons-runtime */
+          istack_commons_runtime   : "com.sun.istack:istack-commons-runtime:3.0.1",
+
+          /* persistence-api */
+          persistence_api          : "javax.persistence:javax.persistence-api:2.2",
+
+          /* commons-configuration */
+          commons_configuration    : "commons-configuration:commons-configuration:1.10",
+
+          /* Swagger */
+          swagger_core             : "$groups.swagger:springfox-swagger2:$versions.swagger",
+          swagger_ui               : "$groups.swagger:springfox-swagger-ui:$versions.swagger",
+
+          /* BOX IF */
+          box_if                   : "$groups.boxif:box-java-sdk:$versions.boxif",
+
+          /* API*/
+          kevinsawicki_http_request: "com.github.kevinsawicki:http-request:6.0",
+          /*Java Mail*/
+          java_mail                : "$groups.javamail:mail:$versions.javamail"
+  ]
+
+}
